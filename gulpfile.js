@@ -18,6 +18,7 @@ build.configureWebpack.mergeConfig({
     }
 
 });
+
 var getTasks = build.rig.getTasks;
 build.rig.getTasks = function () {
   var result = getTasks.call(build.rig);
@@ -26,6 +27,8 @@ build.rig.getTasks = function () {
 
   return result;
 };
+
+
 build.initialize(gulp);
 
 build.configureWebpack.mergeConfig({
